@@ -1,0 +1,29 @@
+
+
+from telethon import TelegramClient, events
+
+# Configuración del cliente de Telegram
+
+api_id = '24128308'
+api_hash = 'e1d006e1aede7e1159b55148232780d7'
+bot_token = '7282358694:AAEMO05rCB-_rLFyKofipO-viQTwzrgnx1U'
+
+client = TelegramClient('bot_session', api_id, api_hash)
+
+@client.on(events.NewMessage(pattern='/getid'))
+async def get_group_id(event):
+    # Verifica si el mensaje es de un grupo o canal
+    if event.is_group or event.is_channel:
+        group_id = event.chat_id  # Obtiene el ID del grupo o canal
+        await event.reply(f'El ID de este grupo/canal es: `{group_id}`', parse_mode='markdown')
+    else:
+        await event.reply('Este comando solo funciona en grupos o canales.')
+
+async def main():
+    # Iniciar sesión en el cliente utilizando el bot token
+    await client.start(bot_token=bot_token)
+    await client.run_until_disconnected()
+
+if __name__ == '__main__':
+    import asyncio
+    asyncio.run(main())

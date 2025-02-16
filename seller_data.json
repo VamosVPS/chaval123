@@ -1,0 +1,109 @@
+{
+    "sirius928392": {
+        "assigned_credits": 45,
+        "assigned_days": 33,
+        "sold_credits": [
+            {
+                "cantidad": 10,
+                "comprador": "Darknezzz",
+                "fecha": "2024-09-06 17:57:58",
+                "vendido_por": "sirius928392"
+            },
+            {
+                "cantidad": 5,
+                "comprador": "lexPisco",
+                "fecha": "2024-09-06 20:45:11",
+                "vendido_por": "sirius928392"
+            },
+            {
+                "cantidad": 10,
+                "comprador": "oscreamhck",
+                "fecha": "2024-09-06 23:41:58",
+                "vendido_por": "sirius928392"
+            },
+            {
+                "cantidad": 10,
+                "comprador": "glokc12",
+                "fecha": "2024-09-07 15:17:04",
+                "vendido_por": "sirius928392"
+            },
+            {
+                "cantidad": 20,
+                "comprador": "Adadako25",
+                "fecha": "2024-09-07 16:31:24",
+                "vendido_por": "sirius928392"
+            }
+        ],
+        "sold_days": [
+            {
+                "cantidad": 1,
+                "comprador": "luis235luis",
+                "fecha": "2024-09-11 22:24:14",
+                "vendido_por": "sirius928392"
+            },
+            {
+                "cantidad": 1,
+                "comprador": "Fllower737",
+                "fecha": "2024-09-13 22:35:41",
+                "vendido_por": "sirius928392"
+            },
+            {
+                "cantidad": 1,
+                "comprador": "Fllower737",
+                "fecha": "2024-09-13 22:37:25",
+                "vendido_por": "sirius928392"
+            },
+            {
+                "cantidad": 1,
+                "comprador": "KEYLER_oficial1",
+                "fecha": "2024-09-20 22:30:40",
+                "vendido_por": "sirius928392"
+            }
+        ],
+        "clients": {}
+    },
+    "Zenin_7K": {
+        "assigned_credits": 70,
+        "assigned_days": 0,
+        "sold_credits": [
+            {
+                "cantidad": 30,
+                "comprador": "el_mati2000",
+                "fecha": "2024-09-27 21:19:55",
+                "vendido_por": "Zenin_7K"
+            }
+        ],
+        "sold_days": [
+            {
+                "cantidad": 30,
+                "comprador": "then_ben",
+                "fecha": "2024-09-15 19:24:54",
+                "vendido_por": "Zenin_7K"
+            },
+            {
+                "cantidad": 30,
+                "comprador": "GHClone4Bot",
+                "fecha": "2024-09-15 19:31:17",
+                "vendido_por": "Zenin_7K"
+            },
+            {
+                "cantidad": 30,
+                "comprador": "then_ben",
+                "fecha": "2024-09-15 19:33:44",
+                "vendido_por": "Zenin_7K"
+            }
+        ]
+    },
+    "OKARUN_OV": {
+        "assigned_credits": 3000,
+        "assigned_days": 300,
+        "sold_credits": [],
+        "sold_days": []
+    },
+    "GodOfNewWorlds": {
+        "assigned_credits": 2000,
+        "assigned_days": 100,
+        "sold_credits": [],
+        "sold_days": []
+    }
+}
