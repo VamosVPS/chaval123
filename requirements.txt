@@ -2,3 +2,4 @@ telethon==1.30.0         # Librería principal para interacción con Telegram
 requests>=2.20.0         # Para hacer solicitudes HTTP
 selenium==4.12.0         # Para control del navegador
 faker==18.9.0            # Para generar datos falsos (direcciones, nombres, etc.)
+Pillow
