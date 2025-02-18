@@ -25,9 +25,10 @@ bot_command_map = {
         '/dnive', '/licencia', '/agv',  '/bitel',
         '/claro', '/sunedu', '/mine', '/afp',
         '/finan', '/sbs', '/dir', '/sunat', '/ce', '/cve', '/nmve', '/sueldos',
-        '/mtc', '/c4w', '/c4t', '/seeker', '/tive','/biv','/tivep'
+        '/mtc', '/c4w', '/c4t', '/seeker', '/tive','/biv','/tivep','/dni','/dnif','/nm', '/pla', '/migra','/ag','/c4','/antpol', '/tra','/sune','/dnivaz','/dnivam','/cor',
+        '/telp','/antpen', '/antjud','/sue','/tel','/fam', '/ag'
     ],
-    'Leder': ['/nm', '/pla', '/migra','/ag','/c4','/antpol', '/tra','/sune','/dnivaz','/dnivam','/cor','/telp','/antpen', '/antjud','/sue','/tel','/fam', '/ag','/dnif','/actan', '/actam', '/actad', '/migrapdf', '/fisdet', '/actamdb', '/actaddb', '/fa', '/migrapdfdb', '/agv', '/agvp'],
+    'Leder': ['/actan', '/actam', '/actad', '/migrapdf', '/fisdet', '/actamdb', '/actaddb', '/fa', '/migrapdfdb', '/agv', '/agvp'],
     'Yape': ['/yape_generate']
 }
 
@@ -39,12 +40,12 @@ def procesar_respuesta_generica(texto_respuesta, comando):
         '/dnif': {
             'GRADO INSTRUCCION': '[📝] 𝗜𝗡𝗙𝗢\n\n𝗚𝗥𝗔𝗗𝗢 𝗗𝗘 𝗜𝗡𝗦𝗧𝗥𝗨𝗖𝗖𝗜𝗢𝗡',
             'PROVINCIA': '𝗣𝗥𝗢𝗩𝗜𝗡𝗖𝗜𝗔',
-                        'ESTADO CIVIL': '𝗘𝗦𝗧𝗔𝗗𝗢 𝗖𝗜𝗩𝗜𝗟',
+            'ESTADO CIVIL': '𝗘𝗦𝗧𝗔𝗗𝗢 𝗖𝗜𝗩𝗜𝗟',
                 '[#LEDER_BOT] → RENIEC ONLINE[PREMIUM]': '#PISLLING_DOX_RENIEC\n━━━━━━━━━━━━━━━━━━',
 
          'DIRECCIÓN': '𝗗𝗜𝗥𝗘𝗖𝗖𝗜𝗢𝗡',
 
-                        '[⚠] Error. Posiblemente el servidor de RENIEC se encuentra caido, porfavor esperar a que se restablezca. Como alternativa puedes usar el respaldo /dnifd.': '[⚠️ Atención] El servidor de RENIEC está presentando problemas de conexión. Por favor, intenta nuevamente más tarde. Alternativamente, utiliza el respaldo /dnifb.',
+                        '[⚠] Error. Posiblemente el servidor de RENIEC se encuentra caido, porfavor esperar a que se restablezca. Como alternativa puedes usar el respaldo /dnifd.': '[⚒️] 𝗘𝗡 𝗠𝗔𝗡𝗧𝗘𝗡𝗜𝗠𝗜𝗘𝗡𝗧𝗢, 𝗔𝗟𝗧𝗢𝗢𝗢 🗣️',
 
 
         },  '/dnifd': {
@@ -54,27 +55,30 @@ def procesar_respuesta_generica(texto_respuesta, comando):
         },
         '/sunarp': {
             'RESULTADOS PROPIEDADES SUNARP': '🏠 | 𝗕𝗜𝗘𝗡𝗘𝗦 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢𝗦',
-            'DOCUMENTO': '𝗗𝗢𝗖𝗨𝗠𝗘𝗡𝗧𝗢',
-            'N° PLACA': '𝗡° 𝗣𝗟𝗔𝗖𝗔',
-            'N° PARTIDA': '𝗡° 𝗣𝗔𝗥𝗧𝗜𝗗𝗔',
-            'ESTADO': '𝗘𝗦𝗧𝗔𝗗𝗢',
+            'DOCUMENTO': '𝗗𝗡𝗜',
+            'N° PLACA': '𝗠𝗔𝗧𝗥𝗜𝗖𝗨𝗟𝗔',
+            'N° PARTIDA': '𝗣𝗔𝗥𝗧𝗜𝗗𝗔',
+            'ESTADO': '𝗔𝗖𝗧𝗨𝗔𝗟𝗠𝗘𝗡𝗧𝗘',
             'OFICINA': '𝗢𝗙𝗜𝗖𝗜𝗡𝗔',
-            'LIBRO': '𝗟𝗜𝗕𝗥𝗢',
-            'REGISTRO': '𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗢',
-            'ZONA': '𝗭𝗢𝗡𝗔',
+            'LIBRO': '𝗔𝗥𝗖𝗛𝗜𝗩𝗔𝗗𝗢',
+            'REGISTRO': '𝗜𝗡𝗦𝗖𝗥𝗜𝗧𝗢',
+            'ZONA': '𝗔𝗥𝗘𝗔',
             'DIRECCIÓN': '𝗗𝗜𝗥𝗘𝗖𝗖𝗜𝗢𝗡'
         },
          '/claro': {
-            'DNI': '𝗗𝗡𝗜',
-        'NUMERO': '𝗡𝗨𝗠𝗘𝗥𝗢',
+         'RESULTADOS CLARO' : '☎️ | 𝗕𝗔𝗦𝗘 𝗖𝗟𝗔𝗥𝗢',
+         'DNI': '𝗗𝗢𝗖𝗨𝗠𝗘𝗡𝗧𝗢',
+         'NUMERO': '𝗡𝗨𝗠𝗘𝗥𝗢',
          'NOMBRES': '𝗡𝗢𝗠𝗕𝗥𝗘',
-         'APELLIDOS': '𝗔𝗣𝗘𝗟𝗟𝗜𝗗𝗢𝗦 ',
-         'ID CLIENTE': '𝗜𝗗 𝗖𝗟𝗜𝗘𝗡𝗧𝗘 ',
+         'APELLIDOS': '𝗔𝗣𝗘𝗟𝗟𝗜𝗗𝗢𝗦',
+         'ID CLIENTE': '𝗜𝗗',
+         'PLAN': '𝗧𝗔𝗥𝗜𝗙𝗔',
+         'LINEA': '𝗣𝗟𝗔𝗡',
          'CORREO': '𝗖𝗢𝗥𝗥𝗘𝗢 ',
 
         },
          '/bitel': {
-        'DNI': '𝗗𝗡𝗜',
+        'DNI': '𝗗𝗢𝗖𝗨𝗠𝗘𝗡𝗧𝗢',
         'NUMERO': '𝗡𝗨𝗠𝗘𝗥𝗢',
          'NOMBRES': '𝗡𝗢𝗠𝗕𝗥𝗘',
          'APELLIDOS': '𝗔𝗣𝗘𝗟𝗟𝗜𝗗𝗢𝗦 ',
@@ -88,21 +92,22 @@ def procesar_respuesta_generica(texto_respuesta, comando):
          'PLACA': '𝗣𝗟𝗔𝗖𝗔',
          'SERIE': '𝗦𝗘𝗥𝗜𝗘',
          'VIN': '𝗩𝗜𝗡',
-         'NRO MOTOR': '𝗡𝗥𝗢 𝗠𝗢𝗧𝗢𝗥',
+         'NRO MOTOR': '𝗠𝗢𝗧𝗢𝗥',
          'MODELO': '𝗠𝗢𝗗𝗘𝗟𝗢',
          'SEDE': '𝗦𝗘𝗗𝗘',
          'COLOR': '𝗖𝗢𝗟𝗢𝗥',
          'ESTADO': '𝗘𝗦𝗧𝗔𝗗𝗢 ',
          '[📍] PROPIETARIOS': '[👥] 𝗣𝗥𝗢𝗣𝗜𝗘𝗧𝗔𝗥𝗜𝗢',
          '-': '→',       
-             '🪙 FenixCoins : ♾ - Jose': '',
+             '🪙 FenixCoins : ♾ - Jose': ' ',
+             '🪙 FenixCoins : ♾ - Jose': ' ' ,
 
 
         },
             '/nm': {
         'DNI': '𝗗𝗡𝗜',
         '[#LEDER_BOT] → RENIEC NOMBRES [PREMIUM]': '🔍 | 𝗥𝗘𝗦𝗨𝗟𝗧𝗔𝗗𝗢 𝗡𝗢𝗠𝗕𝗥𝗘',
-         'APELLIDOS': '𝗔𝗣𝗘𝗟𝗟𝗜𝗗𝗢𝗦 ',
+         'APELLIDOS': '𝗔𝗣𝗘𝗟𝗟𝗜𝗗𝗢𝗦',
          'EDAD': '𝗘𝗗𝗔𝗗'
 
         },
@@ -139,28 +144,29 @@ def procesar_respuesta_generica(texto_respuesta, comando):
         'CORREO': '𝗖𝗢𝗥𝗥𝗘𝗢 ',
 
 
-        } ,            '/sueldos': {
-        'DNI': '𝗗𝗡𝗜',
+        } ,     '/sueldos': {
+        'DNI': '𝗗𝗢𝗖𝗨𝗠𝗘𝗡𝗧𝗢',
         'RUC': '𝗥𝗨𝗖',
-        'SITUACION': '𝗦𝗜𝗧𝗨𝗔𝗖𝗜𝗢𝗡',
+        'SITUACION': '𝗘𝗦𝗧𝗔𝗗𝗢',
         'EMPRESA': '𝗘𝗡𝗧𝗜𝗗𝗔𝗗',
         'SUELDO': '𝗦𝗔𝗟𝗔𝗥𝗜𝗢',
-        'PERIODO': '𝗣𝗘𝗥𝗜𝗢𝗗𝗢',     
+        'PERIODO': '𝗖𝗨𝗥𝗦𝗢 𝗘𝗡',
+        'RESULTADOS SUELDOS': '💼 | 𝗛𝗜𝗦𝗧𝗢𝗥𝗜𝗔𝗟 𝗦𝗔𝗟𝗔𝗥𝗜𝗔𝗟',   
 
         
     },            '/tra': {
-        'DNI': '𝗗𝗡𝗜',
+        'DNI': '𝗗𝗢𝗖𝗨𝗠𝗘𝗡𝗧𝗢',
         'RUC': '𝗥𝗨𝗖',
-        'SITUACION': '𝗦𝗜𝗧𝗨𝗔𝗖𝗜𝗢𝗡',
+        'SITUACION': '𝗘𝗦𝗧𝗔𝗗𝗢',
         'EMPRESA': '𝗘𝗡𝗧𝗜𝗗𝗔𝗗',
-        'PERIODO': '𝗣𝗘𝗥𝗜𝗢𝗗𝗢',     
-        'RESULTADOS TRABAJOS': '💼 | 𝗥𝗘𝗦𝗨𝗟𝗧𝗔𝗗𝗢 𝗖𝗛𝗔𝗠𝗕𝗔',
+        'PERIODO': '𝗖𝗨𝗥𝗦𝗢 𝗘𝗡',     
+        'RESULTADOS TRABAJOS': '💼 | 𝗛𝗜𝗦𝗧𝗢𝗥𝗜𝗔𝗟 𝗖𝗛𝗔𝗠𝗕𝗔𝗦',
 
         
     } ,  '/telp': {
         'DNI': '𝗗𝗡𝗜',
          'TIPO': '𝗖𝗟𝗔𝗦𝗜𝗙𝗜𝗖𝗔𝗖𝗜𝗢𝗡',
-         'PLAN': '𝗣𝗟𝗔𝗡',
+         'PLAN': '𝗧𝗔𝗥𝗜𝗙𝗔',
          'TITULAR': '𝗧𝗜𝗧𝗨𝗟𝗔𝗥',
                   'PERIODO': '𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗢',
 
