@@ -24,7 +24,7 @@ bot_command_map = {
         '/ant', '/rq', '/sunarp', '/partida', '/dnivir',
         '/dnive', '/licencia', '/agv',  '/bitel',
         '/claro', '/sunedu', '/mine', '/afp',
-        '/finan', '/sbs', '/dir', '/sunat', '/ce', '/cve', '/nmve', '/sueldos',
+        '/finan', '/sbs', '/dir', '/sunat', '/ce','/sidtoken','/cve', '/nmve', '/sueldos',
         '/mtc', '/c4w', '/c4t', '/seeker', '/tive','/biv','/tivep','/dni','/dnif','/nm', '/pla', '/migra','/ag','/c4','/antpol', '/tra','/sune','/dnivaz','/dnivam','/cor',
         '/telp','/antpen', '/antjud','/sue','/tel','/fam', '/ag'
     ],
