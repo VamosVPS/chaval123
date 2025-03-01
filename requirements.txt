@@ -4,4 +4,4 @@ selenium==4.12.0         # Para control del navegador
 faker==18.9.0            # Para generar datos falsos (direcciones, nombres, etc.)
 pillow
 flask
-threading
+
