@@ -8,7 +8,7 @@ import fantasma  # Importamos fantasma.py
 import telethon
 from PIL import Image
 import shutil
-
+from flask import Flask
 client = TelegramClient(config2.session_name, config2.api_id, config2.api_hash)
 
 original_messages = {}
@@ -465,6 +465,24 @@ async def main():
     print("Bot iniciado. Esperando comandos...")
 
     await client.run_until_disconnected()
+
+
+
+# Configura Flask
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "El bot está en ejecución."
+
+# Función principal
+async def main():
+    await client.start()
+    print("Bot iniciado. Esperando comandos...")
+
+    # Ejecuta Flask en segundo plano si se está ejecutando en Render.com
+    port = int(os.environ.get("PORT", 5000))  # Usa el puerto proporcionado por Render.com
+    app.run(host="0.0.0.0", port=port)
 
 if __name__ == '__main__':
     asyncio.run(main())
