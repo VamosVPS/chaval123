@@ -2566,11 +2566,5 @@ async def main():
 
 
 
-def run_flask():
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
-
-if __name__ == '__main__':
-    flask_thread = threading.Thread(target=run_flask)
-    flask_thread.start()
 
     asyncio.run(main())
