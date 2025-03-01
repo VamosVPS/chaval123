@@ -15,6 +15,7 @@ from datetime import datetime, timedelta
 from collections import defaultdict
 from precios import verificar_acceso, get_user_data, reducir_creditos
 from flask import Flask
+import threading
 
 import vernum  # Importa el archivo vernum.py
 
@@ -2565,21 +2566,11 @@ async def main():
 
 
 
-# Configura Flask
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return "El bot está en ejecución."
-
-# Función principal
-async def main():
-    await client.start()
-    print("Bot iniciado. Esperando comandos...")
-
-    # Ejecuta Flask en segundo plano si se está ejecutando en Render.com
-    port = int(os.environ.get("PORT", 5000))  # Usa el puerto proporcionado por Render.com
-    app.run(host="0.0.0.0", port=port)
+def run_flask():
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
 if __name__ == '__main__':
+    flask_thread = threading.Thread(target=run_flask)
+    flask_thread.start()
+
     asyncio.run(main())
