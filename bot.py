@@ -10,6 +10,7 @@ from PIL import Image
 import shutil
 from flask import Flask
 client = TelegramClient(config2.session_name, config2.api_id, config2.api_hash)
+import threading
 
 original_messages = {}
 rave_responses = []  # Lista temporal para almacenar respuestas de 'rave'
@@ -467,22 +468,11 @@ async def main():
     await client.run_until_disconnected()
 
 
-
-# Configura Flask
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return "El bot está en ejecución."
-
-# Función principal
-async def main():
-    await client.start()
-    print("Bot iniciado. Esperando comandos...")
-
-    # Ejecuta Flask en segundo plano si se está ejecutando en Render.com
-    port = int(os.environ.get("PORT", 5000))  # Usa el puerto proporcionado por Render.com
-    app.run(host="0.0.0.0", port=port)
+def run_flask():
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
 if __name__ == '__main__':
+    flask_thread = threading.Thread(target=run_flask)
+    flask_thread.start()
+
     asyncio.run(main())
