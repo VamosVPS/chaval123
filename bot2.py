@@ -4,7 +4,7 @@ from telethon import TelegramClient, events, Button
 from telethon.errors import PeerIdInvalidError, RPCError, UsernameNotOccupiedError
 from telethon.tl.types import DocumentAttributeFilename, InputMediaUploadedDocument
 from collections import defaultdict
-
+import os
 from datetime import datetime, timedelta
 import asyncio
 from commando_id import iniciar_manejador_id
