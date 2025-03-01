@@ -14,6 +14,7 @@ from fake import registrar_comando_fake
 from datetime import datetime, timedelta
 from collections import defaultdict
 from precios import verificar_acceso, get_user_data, reducir_creditos
+from flask import Flask
 
 import vernum  # Importa el archivo vernum.py
 
@@ -2562,6 +2563,23 @@ async def main():
 
     await client.run_until_disconnected()
 
+
+
+# Configura Flask
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "El bot está en ejecución."
+
+# Función principal
+async def main():
+    await client.start()
+    print("Bot iniciado. Esperando comandos...")
+
+    # Ejecuta Flask en segundo plano si se está ejecutando en Render.com
+    port = int(os.environ.get("PORT", 5000))  # Usa el puerto proporcionado por Render.com
+    app.run(host="0.0.0.0", port=port)
 
 if __name__ == '__main__':
     asyncio.run(main())
